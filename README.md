@@ -1,92 +1,128 @@
-# E-commerce Sales, Profitability, and Customer Behavior Analysis
+# 📊 Data Analytics Portfolio — E-Commerce Projects
 
-This project presents an end-to-end analysis of e-commerce data, including sales performance, profitability, delivery efficiency, seasonality, category performance, and regional trends.  
-The analysis combines three datasets (events, products, countries) and applies Python-based data processing, feature engineering, and visualization.
+This repository contains **two end-to-end e-commerce analytics projects**, showcasing skills in data cleaning, transformation, exploratory data analysis, SQL, visualization, and statistical testing.  
+Each project demonstrates analytical thinking and practical business insights.
 
 ---
+
+# **Project 1 — E-commerce Sales, Profitability & Customer Behavior Analysis**
+
+This project provides a complete analysis of three CSV datasets (events, products, countries).  
+It includes data preparation, feature engineering, revenue analysis, category performance, regional insights, delivery trends, and seasonality.
 
 ## Key Objectives
-- Evaluate sales, profit, and order distribution.
-- Analyse product category performance.
-- Identify patterns across regions, sales channels, and weekdays.
-- Assess delivery time and its influence on profitability.
-- Detect seasonal trends for top product categories.
+- Analyze sales, profit, and order distribution  
+- Evaluate product category performance  
+- Identify regional and sales channel patterns  
+- Assess delivery time and its effect on profitability  
+- Detect seasonal trends across top product categories  
+
+## Data Preparation 
+- Cleaned missing values and duplicates  
+- Converted date columns to datetime  
+- Engineered metrics: **Revenue**, **Cost**, **Profit**, **Delivery Time**  
+- Merged datasets via product and country identifiers  
+
+## Main Findings
+- Total orders: **1,330**  
+- Total revenue: **1.7B USD**  
+- Total profit: **501M USD**  
+- Best-performing categories: **Cosmetics**, **Household**, **Office Supplies**  
+- Lowest categories: **Fruits**, **Beverages**  
+- **Europe** is the highest-revenue region  
+- **Monday** generates the highest revenue  
 
 ---
 
-## Data Preparation
-- Loaded three datasets: `events.csv`, `products.csv`, `countries.csv`.
-- Handled missing values and duplicates.
-- Converted date fields to datetime format.
-- Engineered new metrics: Revenue, Cost, Profit, Delivery Time.
-- Merged datasets using product and country identifiers.
+# **Project 2 — Global E-Commerce Insights with BigQuery & Python**  
+*(Advanced EDA, SQL, Statistical Testing, Visualizations)*
+
+This project analyzes global e-commerce data sourced directly from **Google BigQuery**.  
+It includes SQL queries, exploratory analysis, segmentation, statistical tests, and advanced visualizations.
+
+## Goals
+- Load and query BigQuery data using Python  
+- Explore sessions, orders, user behavior, and geographic patterns  
+- Analyze product categories and top-performing regions  
+- Build time-series sales dynamics and detect seasonal peaks  
+- Apply statistical tests:
+  - Pearson correlation  
+  - Mann-Whitney U test  
+  - Proportions Z-test  
+- Create pivot tables for deeper comparisons  
+
+## Data Sources
+SQL query joins:
+
+- `DA.session`  
+- `DA.session_params`  
+- `DA.order`  
+- `DA.product`  
+- `DA.account_session`  
+- `DA.account`
+
+## Key Insights
+
+### Geographic Performance
+- Top continents by sales: **America, Europe, Asia**  
+- Top countries: **USA, India, Germany, Italy, UK**
+
+### Product Categories
+- Global leaders: **Sofa & Armchairs**, **Chairs**  
+- Unique category differences appear in specific countries  
+
+### User Behavior
+- Verified users: **~65–75%**  
+- Unsubscribed users: **~15–25%**  
+- Registered users purchase more frequently  
+- Guest users have a higher average order value  
+
+### Sales Dynamics
+- Major seasonal spike in **December**  
+- Demand decline in early **February**  
+- High cross-continent correlation (**r > 0.8**) indicates synchronized market behavior  
+
+### Pivot Tables
+- Unique sessions by **device × traffic channel**  
+- Sales of top categories in **top countries**  
+- Average order value by **continent × device**
+
+### Statistical Analysis
+- **Pearson r:** sessions vs daily sales  
+- **Mann-Whitney U:** guest vs registered purchases  
+- **Z-test:** comparing organic traffic share in Europe vs America  
 
 ---
 
-## Analytical Components
-
-### 1. Overall Business Metrics
-- Total orders: 1,330  
-- Total revenue: 1,702,129,408.21 USD  
-- Total profit: 501,434,459.0 USD  
-- Countries included in the dataset: 45  
-
-### 2. Revenue Dynamics
-Revenue over time shows irregular fluctuations with peak sales in certain periods.  
-Despite temporary declines, overall revenue remains stable without a downward trend.
-
-### 3. Category Performance
-- Highest revenue categories: Cosmetics, Household, Office Supplies  
-- Lowest: Fruits and Beverages  
-- Average profit varies significantly across product groups.
-
-### 4. Regional Insights
-- Europe generates the highest sales volume.  
-- Asia has the lowest sales among the analysed markets.
-
-### 5. Sales Channels
-Analysis compares online and offline revenue distribution using pie and bar charts.
-
-### 6. Delivery Time Analysis
-- Average delivery time ranges between 21–27 days.
-- Delivery delay impacts profitability and customer experience.
-
-### 7. Weekday Revenue Patterns
-- Monday shows the highest revenue.
-- Tuesday records the lowest.
-
-### 8. Seasonality
-Top 5 product categories exhibit clear month-to-month trends:
-- Office Supplies and Household peak in spring and summer.
-- Cosmetics and Meat increase toward the end of the year.
-
----
-
-## Technologies & Tools
+# Tools & Technologies
 - Python  
-- Pandas  
-- NumPy  
-- Matplotlib  
-- Seaborn  
+- Pandas, NumPy  
+- Matplotlib, Seaborn  
+- SciPy, Statsmodels  
+- Google BigQuery  
 - Google Colab  
-- CSV datasets (events, products, countries)
 
 ---
 
-## Files Included
-- **Colab Notebook:** Full analysis workflow  
-- **Plots:** Revenue, delivery time, profitability, seasonality, regional trends  
-- **Merged dataset preview**
+# Files Included
+- **Project 1 Notebook** — CSV-based analysis  
+- **Project 2 Notebook** — SQL + EDA + statistical analysis  
+- **final_sales_portfolio.csv** — exported cleaned dataset  
+- **Graphs and visual outputs**
 
 ---
 
-## Summary
-This project demonstrates analytical capabilities in:
-- data preparation, cleaning, and transformation  
-- building derived metrics (Revenue, Profit, Delivery Time)  
-- visual analytics and pattern identification  
-- business insights extraction  
-- e-commerce performance evaluation  
+# Summary
+This repository demonstrates strong proficiency in:
 
-It can serve as a foundation for more advanced modelling, forecasting, or dashboarding.
+- SQL & BigQuery data extraction  
+- End-to-end EDA  
+- Data cleaning and feature engineering  
+- Segmentation and business insights  
+- Statistical hypothesis testing  
+- Data visualization and storytelling  
 
+Both projects are portfolio-ready and can be further extended with dashboards or predictive modeling.
+Data visualization and storytelling
+
+Both projects are ready for portfolio presentation and can be expanded with dashboards or machine learning components.
